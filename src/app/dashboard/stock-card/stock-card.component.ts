@@ -17,7 +17,7 @@ export class StockCardComponent implements OnInit {
   }
 
   get variation(): string {
-    const localizedVariationString = this.stock.variation.toLocaleString();
+    const localizedVariationString = this.stock.variation.toLocaleString('pt-BR');
     const prefix = this.stock.variation > 0 ? '+' : '-';
     return `${prefix} ${localizedVariationString.replace('-', '')}`
   }
